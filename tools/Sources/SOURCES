@@ -1,0 +1,12 @@
+Tutorial:
+https://github.com/GENIVI/capicxx-dbus-tools/wiki/CommonAPI-C---D-Bus-in-10-minutes
+
+Uses:
+https://github.com/GENIVI/capicxx-core-runtime
+https://github.com/GENIVI/capicxx-dbus-runtime
+http://dbus.freedesktop.org/releases/dbus/dbus-1.10.10.tar.gz
+
+
+Fidl Code Generators
+https://github.com/GENIVI/capicxx-core-tools/releases
+https://github.com/GENIVI/capicxx-dbus-tools/releases
