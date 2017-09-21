@@ -13,20 +13,21 @@ link_directories(
     ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/capicxx-core-runtime/build
     ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/build
 #    $ENV{DBUS_PATH}/dbus/.libs
-    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/final/usr/local/lib
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/dbus/.libs
 
 )
 add_executable(HelloWorldClient
-	src/HelloWorldClient.cpp
-	src-gen/v1/commonapi/HelloWorldDBusProxy.cpp
-	src-gen/v1/commonapi/HelloWorldDBusDeployment
+	src/E01HelloWorldClient.cpp
+	src-gen/v0/commonapi/examples/E01HelloWorldDBusProxy.cpp
+	src-gen/v0/commonapi/examples/E01HelloWorldDBusDeployment.cpp
 )
 target_link_libraries(HelloWorldClient CommonAPI CommonAPI-DBus dbus-1)
+
 add_executable(HelloWorldService
-	src/HelloWorldService.cpp
-	src/HelloWorldStubImpl.cpp
-	src-gen/v1/commonapi/HelloWorldDBusStubAdapter.cpp
-	src-gen/v1/commonapi/HelloWorldStubDefault
-	src-gen/v1/commonapi/HelloWorldDBusDeployment
+	src/E01HelloWorldService.cpp
+	src/E01HelloWorldStubImpl.cpp
+	src-gen/v0/commonapi/examples/E01HelloWorldDBusStubAdapter.cpp
+	src-gen/v0/commonapi/examples/E01HelloWorldStubDefault.cpp
+	src-gen/v0/commonapi/examples/E01HelloWorldDBusDeployment.cpp
 )
 target_link_libraries(HelloWorldService CommonAPI CommonAPI-DBus dbus-1)
