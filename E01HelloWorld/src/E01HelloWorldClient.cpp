@@ -28,6 +28,7 @@ int main() {
     std::shared_ptr<E01HelloWorldProxy<>> myProxy = runtime->buildProxy<E01HelloWorldProxy>(domain,
             instance, connection);
 
+    std::cout << myProxy << std::endl;
     std::cout << "Checking availability!" << std::endl;
     while (!myProxy->isAvailable())
         usleep(10);
