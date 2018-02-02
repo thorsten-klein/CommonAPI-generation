@@ -3,17 +3,18 @@ cmake_minimum_required(VERSION 2.8)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++0x")
 include_directories(
     ${CMAKE_SOURCE_DIR}/src-gen
-    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/capicxx-core-runtime/include
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-core-runtime/include
     ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/include
 #    $ENV{DBUS_PATH}
-    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/final/include/dbus-1.0
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/final/lib/dbus-1.0/include
     
 )
 link_directories(
-    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/capicxx-core-runtime/build
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-core-runtime/build
     ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/capicxx-dbus-runtime/build
 #    $ENV{DBUS_PATH}/dbus/.libs
-    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/dbus/.libs
+    ${CMAKE_SOURCE_DIR}/../tools/VM_CommonAPI_C++/dbus-1.10.10/final/lib
 
 )
 add_executable(HelloWorldClient
