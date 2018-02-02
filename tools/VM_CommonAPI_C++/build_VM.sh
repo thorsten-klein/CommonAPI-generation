@@ -67,7 +67,7 @@ echo "--------------------------------------------------------------------------
 echo build dbus
 echo "--------------------------------------------------------------------------------------------"
 cd $DBUS_BUILD 
-$DBUS_SRC_PATH/configure $CONFIGURE_FLAGS --enable-abstract-sockets --enable-tests=no --enable-modular-tests=no #--prefix=$DBUS_BUILD 
+$DBUS_SRC_PATH/configure $CONFIGURE_FLAGS --enable-tests=no --enable-modular-tests=no #--prefix=$DBUS_BUILD 
 make #V=1 #VERBOSE=1
 make install DESTDIR=$DBUS_FINAL #V=1
 
